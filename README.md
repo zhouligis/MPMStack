@@ -1,8 +1,9 @@
 # 🚀MPMStack: Mineral Prospectivity Mapping with Stacking Ensemble
 
-Code for paper currently under review:
+Code for the research paper currently under review:
 “Ensemble Machine Learning with Uncertainty Quantification for 
 Mineral Prospectivity Mapping in Laojunshan Mineral Concentrated Area, Southwest China ”
+Manuscript Number:CAGEO-S-25-01488
 
 ## Features
 
