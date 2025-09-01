@@ -87,58 +87,6 @@ project/
   - Target column (e.g., 'Group'): Mineral occurrence classification
   - Optional scale column: For multi-scale analysis
 
-## 🔧 Advanced Usage
-
-### Custom Pipeline Configuration
-
-```python
-# Initialize with custom settings
-mpm = MPMStack(
-    data_dir='custom_data',
-    results_dir='custom_results',
-    fast_mode=True  # For quick testing
-)
-
-# Load data
-mpm.load_raster_data('path/to/rasters')
-mpm.load_mineral_points('path/to/points.shp', target_column='Mineral_Type')
-
-# Extract features
-mpm.extract_features_from_points()
-
-# Custom feature selection
-mpm.feature_selection(vif_threshold=5.0, info_gain_threshold=0.02)
-
-# Prepare data with custom split
-X_train, X_val, X_test, y_train, y_val, y_test = mpm.prepare_training_data(
-    test_size=0.3, val_size=0.2
-)
-
-# Train models
-mpm.train_models(X_train, X_val, X_test, y_train, y_val, y_test)
-
-# Evaluate
-results = mpm.evaluate_models(X_train, X_val, X_test, y_train, y_val, y_test)
-
-# Generate predictions
-predictions, probabilities = mpm.predict_raster(model_name='Stacking')
-```
-
-### Model Loading and Prediction
-
-```python
-# Load pre-trained models
-mpm = MPMStack(results_dir='existing_results')
-mpm.load_models()
-mpm.load_raster_data('new_raster_data')
-
-# Generate predictions for new area
-predictions, probabilities = mpm.predict_raster(
-    model_name='RandomForest',
-    output_filename='new_area_predictions.tif'
-)
-```
-
 ## Output Files
 
 ### Models
@@ -195,44 +143,8 @@ predictions, probabilities = mpm.predict_raster(
 - **Naive Bayes**: Probabilistic classifier assuming feature independence
 - **Stacking Ensemble**: Meta-learning approach combining all base models
 
-## Performance Optimization
-
-### Memory Management
-- Chunked raster processing for large datasets
-- Efficient data types (float32 for rasters)
-- Garbage collection between processing steps
-
-### Speed Optimization
-- Parallel processing with joblib
-- Fast mode for quick prototyping
-- Optimized feature selection algorithms
-
-## API Reference
-
-### MPMStack Class
-
-#### Initialization
-```python
-MPMStack(data_dir='data', results_dir='results', fast_mode=False)
-```
-
-#### Core Methods
-
-- `load_raster_data(raster_dir=None)`: Load and align raster datasets
-- `load_mineral_points(shapefile_path=None, target_column='Group', scale_column='Scale')`: Load mineral occurrence points
-- `extract_features_from_points()`: Extract raster values at point locations
-- `feature_selection(vif_threshold=10.0, info_gain_threshold=0.01)`: Automated feature selection
-- `prepare_training_data(test_size=0.2, val_size=0.2, random_state=42)`: Split and scale data
-- `train_models(X_train, X_val, X_test, y_train, y_val, y_test)`: Train ensemble models
-- `evaluate_models(X_train, X_val, X_test, y_train, y_val, y_test)`: Comprehensive evaluation
-- `predict_raster(model_name='Stacking', output_filename=None, chunk_size=1000)`: Generate predictions
-- `save_models()`: Save trained models to disk
-- `load_models()`: Load pre-trained models
-- `run_complete_pipeline()`: Execute full pipeline
-
 ## Example Workflows
 
-### Workflow 1: Complete Pipeline
 ```python
 from MPMStack import MPMStack
 
@@ -240,69 +152,6 @@ from MPMStack import MPMStack
 mpm = MPMStack()
 results = mpm.run_complete_pipeline()
 print(f"Best model: {max(results.keys(), key=lambda k: results[k]['test_f1'])}")
-```
-
-### Workflow 2: Step-by-Step Analysis
-```python
-from MPMStack import MPMStack
-
-# Initialize
-mpm = MPMStack(fast_mode=True)
-
-# Load and explore data
-mpm.load_raster_data()
-mpm.load_mineral_points()
-print(f"Loaded {len(mpm.feature_names)} features")
-print(f"Loaded {len(mpm.mineral_points)} mineral points")
-
-# Feature engineering
-mpm.extract_features_from_points()
-mpm.feature_selection(vif_threshold=5.0)
-print(f"Selected {len(mpm.selected_features)} features")
-
-# Model training and evaluation
-data = mpm.prepare_training_data()
-mpm.train_models(*data)
-results = mpm.evaluate_models(*data)
-
-# Generate predictions
-mpm.predict_raster(model_name='Stacking')
-```
-
-### Workflow 3: Model Comparison
-```python
-from MPMStack import MPMStack
-import pandas as pd
-
-# Train models
-mpm = MPMStack()
-results = mpm.run_complete_pipeline()
-
-# Compare models
-comparison = pd.DataFrame(results).T[['test_accuracy', 'test_f1', 'test_auc']]
-print(comparison.sort_values('test_f1', ascending=False))
-
-# Generate predictions with best model
-best_model = comparison.sort_values('test_f1', ascending=False).index[0]
-mpm.predict_raster(model_name=best_model)
-```
-
-## Development Setup
-
-```bash
-# Clone repository
-git clone https://github.com/yourusername/MPMStack.git
-cd MPMStack
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-python -m pytest tests/
 ```
 
 ## Citation
@@ -334,18 +183,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by advances in ensemble learning for geoscience applications
 - Thanks to the open-source geospatial community
 
-## 📋 Dependencies
-
-Create a `requirements.txt` file with the following dependencies:
-
-```
-numpy>=1.19.0
-pandas>=1.2.0
-geopandas>=0.9.0
-rasterio>=1.2.0
-scikit-learn>=1.0.0
-xgboost>=1.5.0
-joblib>=1.0.0
-tqdm>=4.60.0
-statsmodels>=0.12.0
-```
