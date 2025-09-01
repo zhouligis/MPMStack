@@ -1,6 +1,8 @@
 # 🚀MPMStack: Mineral Prospectivity Mapping with Stacking Ensemble
 
-A comprehensive machine learning pipeline for geological exploration that combines multiple algorithms using stacking ensemble method for mineral prospectivity mapping.
+Code for paper currently under review:
+“Ensemble Machine Learning with Uncertainty Quantification for 
+Mineral Prospectivity Mapping in Laojunshan Mineral Concentrated Area, Southwest China ”
 
 ## Features
 
