@@ -2,7 +2,8 @@
 
 Code for the research paper currently under review:
 “Ensemble Machine Learning with Uncertainty Quantification for 
-Mineral Prospectivity Mapping in Laojunshan Mineral Concentrated Area, Southwest China ”
+Mineral Prospectivity Mapping in Laojunshan Mineral Concentrated Area, Southwest China ”.
+
 Manuscript Number:CAGEO-S-25-01488
 
 ## Features
@@ -19,7 +20,7 @@ Manuscript Number:CAGEO-S-25-01488
 
 ### Prerequisites
 
-- Python 3.7 or higher
+- Python 3.9 or higher
 - GDAL/OGR libraries for geospatial data processing
 
 ### Installation
