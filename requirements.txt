@@ -1,0 +1,41 @@
+# MPMStack: Mineral Prospectivity Mapping with Stacking Ensemble
+# Requirements file for MPMStack.py
+
+# Core scientific computing
+numpy>=1.19.0
+pandas>=1.2.0
+scipy>=1.6.0
+
+# Geospatial data processing
+geopandas>=0.9.0
+rasterio>=1.2.0
+shapely>=1.7.0
+fiona>=1.8.0
+pyproj>=3.0.0
+
+# Machine learning
+scikit-learn>=1.0.0
+xgboost>=1.5.0
+statsmodels>=0.12.0
+
+# Utilities
+joblib>=1.0.0
+tqdm>=4.60.0
+
+# Optional: Enhanced functionality (uncomment if needed)
+# matplotlib>=3.3.0  # For basic plotting
+# seaborn>=0.11.0    # For statistical visualization
+# plotly>=5.0.0      # For interactive plots
+# imbalanced-learn>=0.8.0  # For handling imbalanced datasets
+# shap>=0.40.0       # For model interpretability
+
+# Development and testing (uncomment for development)
+# pytest>=6.0.0
+# pytest-cov>=2.0.0
+# black>=21.0.0
+# flake8>=3.8.0
+# mypy>=0.800
+
+# Note: GDAL/OGR libraries are required for geospatial operations
+# On Windows: conda install -c conda-forge gdal
+# On Linux/Mac: apt-get install gdal-bin libgdal-dev (Ubuntu) or brew install gdal (Mac)
