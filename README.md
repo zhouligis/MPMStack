@@ -164,7 +164,7 @@ If you use MPMStack in your research, please cite:
 
 ```bibtex
 @software{mpmstack2025,
-  title={MPMStack: Ensemble Machine Learning with Uncertainty Quantification for Mineral Prospectivity Mapping},
+  title={Ensemble Machine Learning with Uncertainty Quantification for Mineral Prospectivity Mapping in Laojunshan Mineral Concentrated Area, Southwest China},
   author={Li Zhou},
   year={2025},
   url={https://github.com/zhouligis/MPMStack}
