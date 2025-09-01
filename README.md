@@ -56,7 +56,7 @@ for model_name, metrics in results.items():
     print(f"{model_name} - Test Accuracy: {metrics['test_accuracy']:.4f}")
 ```
 
-## 📁 Data Structure
+## Data Structure
 
 Organize your data in the following structure:
 
@@ -141,10 +141,10 @@ project/
 
 ### Supported Algorithms
 
+-- **Naive Bayes**: Probabilistic classifier assuming feature independence
 - **Support Vector Machine (SVM)**: Non-linear classification with RBF kernel
 - **Random Forest**: Ensemble of decision trees with bootstrap aggregating
 - **XGBoost**: Gradient boosting with advanced regularization
-- **Naive Bayes**: Probabilistic classifier assuming feature independence
 - **Stacking Ensemble**: Meta-learning approach combining all base models
 
 ## Example Workflows
