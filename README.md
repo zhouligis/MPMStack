@@ -1,4 +1,4 @@
-# 🚀MPMStack: Mineral Prospectivity Mapping with Stacking Ensemble
+# 🚀MPMStack: Ensemble Machine Learning with Uncertainty Quantification for Mineral Prospectivity Mapping
 
 Code for the research paper currently under review:
 “Ensemble Machine Learning with Uncertainty Quantification for 
@@ -164,7 +164,7 @@ If you use MPMStack in your research, please cite:
 
 ```bibtex
 @software{mpmstack2025,
-  title={MPMStack: Mineral Prospectivity Mapping with Stacking Ensemble},
+  title={MPMStack: Ensemble Machine Learning with Uncertainty Quantification for Mineral Prospectivity Mapping},
   author={Li Zhou},
   year={2025},
   url={https://github.com/zhouligis/MPMStack}
