@@ -177,8 +177,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/MPMStack/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/MPMStack/discussions)
+- **Issues**: [GitHub Issues](https://github.com/zhouligis/MPMStack/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/zhouligis/MPMStack/discussions)
 - **Email**: zhouligis@163.com
 
 ## Acknowledgments
