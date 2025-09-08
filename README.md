@@ -4,7 +4,7 @@ Code for the research paper currently under review:
 “Ensemble Machine Learning with Uncertainty Quantification for 
 Mineral Prospectivity Mapping in Laojunshan Mineral Concentrated Area, Southwest China ”.
 
-Manuscript Number:CAGEO-S-25-01488
+Manuscript Number:ACAGS-D-25-00145
 
 ## Features
 
@@ -184,6 +184,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Built with [scikit-learn](https://scikit-learn.org/), [XGBoost](https://xgboost.readthedocs.io/), and [rasterio](https://rasterio.readthedocs.io/)
-- Inspired by advances in ensemble learning for geoscience applications
 - Thanks to the open-source geospatial community
 
