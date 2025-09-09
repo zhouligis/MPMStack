@@ -4,7 +4,7 @@ Code for the research paper currently under review:
 “Ensemble Machine Learning with Uncertainty Quantification for 
 Mineral Prospectivity Mapping in Laojunshan Mineral Concentrated Area, Southwest China ”.
 
-Manuscript Number:ACAGS-D-25-00145
+Manuscript Number:ACAGS-D-25-00147
 
 ## Features
 
